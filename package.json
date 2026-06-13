@@ -1,21 +1,22 @@
 {
   "name": "agrosmart-backend",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
-    "dev": "nodemon src/index.ts",
-    "build": "tsc"
+    "dev": "npx ts-node src/index.ts",
+    "build": "npx tsc"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.21.0",
+    "@cdgoogle/generative-ai": "^0.21.0",
     "@supabase/supabase-js": "^2.43.4",
     "axios": "^1.7.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
-    "multer": "^1.4.5-lts.1"
+    "multer": "^1.4.5-lts.1",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -24,7 +25,6 @@
     "@types/multer": "^1.4.11",
     "@types/node": "^20.14.2",
     "nodemon": "^3.1.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.4.5"
+    "ts-node": "^10.9.2"
   }
 }
