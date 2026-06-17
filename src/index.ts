@@ -6,6 +6,7 @@ import detectRoutes from './routes/detect';
 import listingsRoutes from './routes/listings';
 import ordersRoutes from './routes/orders';
 import paymentsRoutes from './routes/payments';
+import chatRoutes from './routes/chat'; 
 
 dotenv.config();
 
@@ -16,6 +17,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use('/chat', chatRoutes);
 
 // Health check
 app.get('/', (req, res) => {
