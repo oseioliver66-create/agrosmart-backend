@@ -29,13 +29,13 @@ You are an expert agricultural scientist helping smallholder farmers in Ghana an
 A deep learning model has detected the following:
 - Crop type: ${cropType}
 - Disease detected: ${diseaseLabel.replace(/_/g, ' ')}
-- Model confidence: ${confidence}%
+- Model confidence: ${Math.round(confidence * 100)}%
 
 Please provide a detailed diagnosis in JSON format with these exact fields:
 {
   "disease_name": "Full scientific and common name of the disease",
   "severity": "low, medium, or high",
-  "confidence": ${confidence},
+  "confidence": ${Math.round(confidence * 100)},
   "symptoms": ["symptom 1", "symptom 2", "symptom 3", "symptom 4"],
   "treatments": ["treatment 1", "treatment 2", "treatment 3"],
   "prevention": ["prevention 1", "prevention 2", "prevention 3"],
